@@ -6,7 +6,25 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Welcome to the API, Go to '/graphql' for access interface ")
+    return HttpResponse("""
+        Welcome to the API! Go to '/graphql' for access to the interface with JWT Authentication.
+
+        To get an authenticated user token, run the following mutation:
+        
+        mutation {
+          tokenAuth(username: "admin", password: "admin") {
+            token
+            refreshToken
+          }
+        }
+
+        Add the token to your GraphQL requests as a Bearer token:
+        
+        {
+          Authorization: Bearer <your_token_here>
+        }
+    """)
+
 
 urlpatterns = [
     path('', home),  # This will handle requests to the root URL /
