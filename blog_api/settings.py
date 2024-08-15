@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-w0p1t1vy20av5qrg$&#xi=pp2r82wo9e(32f8#8wr-76amg8-t'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False").lower() == "false"
 
 ALLOWED_HOSTS = ['blog-api-vyot.onrender.com', '127.0.0.1', 'localhost']
 

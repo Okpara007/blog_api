@@ -17,17 +17,17 @@ class AuthorType(DjangoObjectType):
         fields = ("id", "name", "email", "bio")
 
 class PostType(DjangoObjectType):
-    comments = graphene.List(lambda: CommentType)  # Add comments field to PostType
-    author = graphene.Field(UserType)  # Expose the User model as author in the schema
+    comments = graphene.List(lambda: CommentType) 
+    author = graphene.Field(UserType)  
 
     class Meta:
         model = Post
         fields = ("id", "title", "content", "created_at", "updated_at", "author", "last_updated")
 
     def resolve_comments(self, info):
-        return self.comments.all()  # Resolve comments related to this post
+        return self.comments.all() 
 
-    def resolve_author(self, info):  # Custom resolver for the author field
+    def resolve_author(self, info):  
         return self.author
 
 class CommentType(DjangoObjectType):
@@ -62,7 +62,7 @@ class Query(graphene.ObjectType):
                 posts = posts.filter(title__icontains=title_contains)
             if content_contains:
                 posts = posts.filter(content__icontains=content_contains)
-            return posts[skip: skip + limit]  # Apply pagination
+            return posts[skip: skip + limit]  
         except Exception as e:
             raise Exception(f"Error fetching posts: {str(e)}")
 
@@ -275,6 +275,6 @@ class Mutation(graphene.ObjectType):
     create_comment = CreateComment.Field()
     update_comment = UpdateComment.Field()
     delete_comment = DeleteComment.Field()
-    token_auth = ObtainTokenMutation.Field()  # Add JWT Authentication Mutation
+    token_auth = ObtainTokenMutation.Field() 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)

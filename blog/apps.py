@@ -5,4 +5,4 @@ class BlogConfig(AppConfig):
     name = 'blog'
 
     def ready(self):
-        import blog.signals  # Ensure this line is present to connect the signals
+        import blog.signals 

@@ -37,7 +37,7 @@ class CommentModelTest(TestCase):
 # GraphQL Query Tests
 class BlogQueryTest(GraphQLTestCase):
     GRAPHQL_SCHEMA = schema
-    GRAPHQL_URL = '/graphql/'  # Ensure the correct GraphQL URL is used
+    GRAPHQL_URL = '/graphql/' 
 
     def setUp(self):
         self.author = Author.objects.create(name="Jonathan Moore", email="john@example.com", bio="A test author.")
@@ -59,7 +59,7 @@ class BlogQueryTest(GraphQLTestCase):
             }
             '''
         )
-        # Check the status code and response content
+        
         print(response.status_code)
         print(response.content)
         content = response.json()
@@ -107,7 +107,7 @@ class BlogQueryTest(GraphQLTestCase):
 # GraphQL Mutation Tests
 class BlogMutationTest(GraphQLTestCase):
     GRAPHQL_SCHEMA = schema
-    GRAPHQL_URL = '/graphql/'  # Ensure the correct GraphQL URL is used
+    GRAPHQL_URL = '/graphql/'  
 
     def setUp(self):
         self.author = Author.objects.create(name="Jonathan Moore", email="john@example.com", bio="A test author.")

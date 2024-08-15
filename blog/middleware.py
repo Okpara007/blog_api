@@ -10,4 +10,4 @@ class EnforceJWTAuthenticationMiddleware(MiddlewareMixin):
                 user, _ = jwt_authenticator.authenticate(request)
                 request.user = user
             except Exception:
-                pass  # Handle authentication failure as anonymous user
+                pass 
