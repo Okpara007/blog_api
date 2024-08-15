@@ -81,9 +81,17 @@ Use JWT tokens to authenticate when making requests.
 Test various queries and mutations as described in the Testing section.
 
 JWT Authentication
+To get authnenticated user token Run:
+mutation {
+  tokenAuth(username: "admin", password: "admin") {
+    token
+    refreshToken
+  }
+}
+
 Add the token to your GraphQL requests as a Bearer token:
 {
-  "Authorization": "Bearer your_jwt_token_here"
+  "Authorization": "Bearer <your_token_here>"
 }
 
 Testing
