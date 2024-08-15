@@ -1,3 +1,17 @@
+"" JWT Authentication
+To get authnenticated user token Run:
+mutation {
+  tokenAuth(username: "admin", password: "admin") {
+    token
+    refreshToken
+  }
+}
+
+Add the token to your GraphQL requests as a Bearer token:
+{
+  "Authorization": "Bearer <your_token_here>"
+} ""
+
 Blog API with GraphQL
 
 This Django-based blog API supports creating, updating, deleting, and querying posts, authors, and comments. JWT authentication secures the GraphQL endpoint.
