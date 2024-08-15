@@ -32,7 +32,7 @@ Run the Server:
 python manage.py runserver
 
 GraphQL Endpoint:
-Access the GraphQL interface at /graphql/.
+Access the GraphQL interface at /graphql/: https://blog-2di2.onrender.com/graphql
 
 Architecture: MTV (Model-Template-View)
 This Django Project follows the MTV (Model-Template-View) architecture, which is a variation of the traditional MVC (Model-View-Controller) pattern. The key components in the MTV architecture are:
