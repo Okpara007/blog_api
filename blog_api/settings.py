@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w0p1t1vy20av5qrg$&#xi=pp2r82wo9e(32f8#8wr-76amg8-t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["blog-api-vyot.onrender.com"]
+ALLOWED_HOSTS = ['blog-api-vyot.onrender.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -51,7 +51,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blog.middleware.EnforceJWTAuthenticationMiddleware',  # Add your custom middleware here
+    'blog.middleware.EnforceJWTAuthenticationMiddleware',  
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 
@@ -154,3 +155,5 @@ AUTHENTICATION_BACKENDS = [
 GRAPHQL_AUTH = {
     "LOGIN_ALLOWED_FIELDS": ["email"],
 }
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
