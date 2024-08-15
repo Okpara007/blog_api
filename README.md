@@ -31,6 +31,17 @@ python manage.py createsuperuser
 Run the Server:
 python manage.py runserver
 
+Hosting on Render
+The API is hosted on Render, a cloud platform that provides easy deployment for web applications.
+
+Deployment Steps:
+Push the project to a Git repository.
+Create a new web service on Render and link it to the Git repository.
+Configure environment variables and settings in the Render dashboard.
+Deploy the application.
+
+Access the deployed API via the provided Render URL.
+
 GraphQL Endpoint:
 Access the GraphQL interface at /graphql/: https://blog-2di2.onrender.com/graphql
 
