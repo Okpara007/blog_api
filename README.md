@@ -11,7 +11,7 @@ Virtual environment
 
 Installation
 Clone the Repository:
-git clone https://github.com/yourusername/blog_api.git
+git clone https://github.com/Okpara007/blog_api.git
 cd blog_api
 
 Create and Activate a Virtual Environment:
