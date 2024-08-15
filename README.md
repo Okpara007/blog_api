@@ -1,4 +1,4 @@
-"" JWT Authentication
+NB: "" JWT Authentication
 To get authnenticated user token Run:
 mutation {
   tokenAuth(username: "admin", password: "admin") {
