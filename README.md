@@ -12,7 +12,10 @@ Add the token to your GraphQL requests as a Bearer token:
   "Authorization": "Bearer <your_token_here>"
 } ""
 
-Blog API with GraphQL
+
+
+
+BLOG API WITH GRAPHQL
 
 This Django-based blog API supports creating, updating, deleting, and querying posts, authors, and comments. JWT authentication secures the GraphQL endpoint.
 
