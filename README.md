@@ -1,4 +1,6 @@
-NB: "" JWT Authentication
+NB: "" use 'admin' for the username and also 'admin' for the password to obtain token 
+
+JWT Authentication
 To get authnenticated user token Run:
 mutation {
   tokenAuth(username: "admin", password: "admin") {
@@ -10,9 +12,9 @@ mutation {
 Add the token to your GraphQL requests as a Bearer token:
 {
   "Authorization": "Bearer <your_token_here>"
-} ""
+} 
 
-use admin for the username and the password to obtain token
+ ""
 
 
 
