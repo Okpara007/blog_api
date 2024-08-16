@@ -62,6 +62,10 @@ Access the deployed API via the provided Render URL.
 GraphQL Endpoint:
 Access the GraphQL interface at /graphql/: https://blog-2di2.onrender.com/graphql
 
+JWT Token Endpoints:
+Obtain Token: https://blog-2di2.onrender.com/api/token/
+Refresh Token: https://blog-2di2.onrender.com/api/token/refresh/
+
 Architecture: MTV (Model-Template-View)
 This Django Project follows the MTV (Model-Template-View) architecture, which is a variation of the traditional MVC (Model-View-Controller) pattern. The key components in the MTV architecture are:
 
@@ -93,6 +97,9 @@ GraphQL Pagination: Basic pagination has been implemented using skip and limit p
 Django's Built-in User Model: The built-in User model is used for authentication, and posts are linked to users.
 
 Running GraphQL Queries and Mutations
+JWT Token Endpoints:
+Obtain Token: /api/token/
+Refresh Token: /api/token/refresh/
 Access the GraphQL interface at /graphql/.
 Use JWT tokens to authenticate when making requests.
 Test various queries and mutations as described in the Testing section.
